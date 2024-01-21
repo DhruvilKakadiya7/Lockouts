@@ -35,6 +35,7 @@ const BaseNavBar = () => {
                 w="10em"
                 h="auto"
                 cursor="pointer"
+                as={'a'}
                 href='/'
             />
             <HStack
