@@ -56,7 +56,7 @@ const WaitBox = ({ id, playerNumber }) => {
                 <InputGroup px={2}>
                     <Input
                         type="text"
-                        value={`http://localhost:3000/duel/${id}`}
+                        value={`https://lockouts.netlify.app//duel/${id}`}
                         size="md"
                         textOverflow="ellipsis"
                         readOnly
