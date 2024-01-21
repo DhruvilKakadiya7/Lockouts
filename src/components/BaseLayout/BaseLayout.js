@@ -29,15 +29,16 @@ const BaseNavBar = () => {
             pt={2}
             height={'4.5em'}
         >
-            <Image
-                aria-label="CPDuels logo"
-                src={colorMode === "light" ? LightLogo : DarkLogo}
-                w="10em"
-                h="auto"
-                cursor="pointer"
-                as={'a'}
-                href='/'
-            />
+            <a href='/'>
+
+                <Image
+                    aria-label="CPDuels logo"
+                    src={colorMode === "light" ? LightLogo : DarkLogo}
+                    w="10em"
+                    h="auto"
+                    cursor="pointer"
+                />
+            </a>
             <HStack
                 fontSize="1.5rem"
                 fontWeight="800"
@@ -80,63 +81,63 @@ const HamburgerMenu = () => {
     const { colorMode, toggleColorMode } = useColorMode();
 
     return (
-      <>
-        <IconButton
-          variant="unstyled"
-          icon={<HiMenuAlt4 size={45} />}
-          onClick={onOpen}
-        />
-        <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
-          <DrawerOverlay />
-          <DrawerContent>
-            <DrawerHeader borderBottomWidth="1px">
-              <Flex justify="space-between">
-                <Text textAlign="center" textStyle="body1Semi">
-                  Menu
-                </Text>
-                <IconButton
-                  my="auto"
-                  variant="unstyled"
-                  icon={<IoClose size={36} />}
-                  onClick={onClose}
-                />
-              </Flex>
-            </DrawerHeader>
-            <DrawerBody>
-              <List
-                fontSize="1.4rem"
-                listStylePos="inside"
-                pl={0}
-                pb={2}
-                spacing={2}
-                borderBottom="1px solid"
-                borderColor="gray"
-              >
-                <ListItem mx={0}>
-                  <Link  _hover={{ textDecoration: "none" }} to="/">
-                    Home
-                  </Link>
-                </ListItem>
-                <ListItem mx={0}>
-                  <Link
-                    
-                    sx={{ textDecoration: "none" }}
-                    href="/play"
-                  >
-                    Play
-                  </Link>
-                </ListItem>
-                <ListItem mx={0}>
-                  <Link
-                    
-                    sx={{ textDecoration: "none" }}
-                    href="/contact"
-                  >
-                    Contact Us
-                  </Link>
-                </ListItem>
-              </List>
-              {/* <Box mt={3}>
+        <>
+            <IconButton
+                variant="unstyled"
+                icon={<HiMenuAlt4 size={45} />}
+                onClick={onOpen}
+            />
+            <Drawer placement="right" onClose={onClose} isOpen={isOpen}>
+                <DrawerOverlay />
+                <DrawerContent>
+                    <DrawerHeader borderBottomWidth="1px">
+                        <Flex justify="space-between">
+                            <Text textAlign="center" textStyle="body1Semi">
+                                Menu
+                            </Text>
+                            <IconButton
+                                my="auto"
+                                variant="unstyled"
+                                icon={<IoClose size={36} />}
+                                onClick={onClose}
+                            />
+                        </Flex>
+                    </DrawerHeader>
+                    <DrawerBody>
+                        <List
+                            fontSize="1.4rem"
+                            listStylePos="inside"
+                            pl={0}
+                            pb={2}
+                            spacing={2}
+                            borderBottom="1px solid"
+                            borderColor="gray"
+                        >
+                            <ListItem mx={0}>
+                                <Link _hover={{ textDecoration: "none" }} to="/">
+                                    Home
+                                </Link>
+                            </ListItem>
+                            <ListItem mx={0}>
+                                <Link
+
+                                    sx={{ textDecoration: "none" }}
+                                    href="/play"
+                                >
+                                    Play
+                                </Link>
+                            </ListItem>
+                            <ListItem mx={0}>
+                                <Link
+
+                                    sx={{ textDecoration: "none" }}
+                                    href="/contact"
+                                >
+                                    Contact Us
+                                </Link>
+                            </ListItem>
+                        </List>
+                        {/* <Box mt={3}>
                 <Text fontSize="1.4rem" as="span" mr={3}>
                   {colorMode[0].toUpperCase() + colorMode.substring(1)} Mode
                 </Text>
@@ -147,32 +148,32 @@ const HamburgerMenu = () => {
                   onChange={toggleColorMode}
                 />
               </Box> */}
-            </DrawerBody>
-          </DrawerContent>
-        </Drawer>
-      </>
+                    </DrawerBody>
+                </DrawerContent>
+            </Drawer>
+        </>
     );
-  };
+};
 const MobileBaseNavbar = () => {
     const navigate = useNavigate();
     const { colorMode } = useColorMode();
     const navigateHome = () => navigate("/");
-  
+
     return (
-      <Flex justify="space-between" align="center" mt={1} mx={0}>
-        <Image
-          aria-label="CPDuels logo"
-          src={colorMode === "light" ? LightLogo : DarkLogo}
-          w="10em"
-          h="auto"
-          mt={1}
-          cursor="pointer"
-          onClick={navigateHome}
-        />
-        <HamburgerMenu />
-      </Flex>
+        <Flex justify="space-between" align="center" mt={1} mx={0}>
+            <Image
+                aria-label="CPDuels logo"
+                src={colorMode === "light" ? LightLogo : DarkLogo}
+                w="10em"
+                h="auto"
+                mt={1}
+                cursor="pointer"
+                onClick={navigateHome}
+            />
+            <HamburgerMenu />
+        </Flex>
     );
-  };
+};
 const BaseContainer = ({ content }) => {
     return <Box mt={2}>{content}</Box>;
 };
@@ -237,11 +238,11 @@ export const BaseLayout = ({ content }) => {
                 width={['312px', '472px', '760px', '984px', '1150px']}
                 m={0}
                 p={0}
-                // border="1px solid black"
+            // border="1px solid black"
             >
                 {/* <BaseNavBar /> */}
                 {isMobile ? <MobileBaseNavbar /> : <BaseNavBar />}
-                <BaseContainer content={content}/>
+                <BaseContainer content={content} />
                 <BaseFooter />
                 {/* {isMobile ? "" : <ToggleColorMode/>} */}
             </Box>
