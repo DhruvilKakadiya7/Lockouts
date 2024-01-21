@@ -11,3 +11,83 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.tex-font-style-tt {
+  font-size: 110%;
+  font-family: courier new,monospace;
+}
+
+.sample-tests {
+  font-family: Consolas,lucida console,andale mono,bitstream vera sans mono,courier new,Courier;
+  font-size: 1em;
+}
+
+.section-title {
+  font-family: helvetica neue,Helvetica,Arial,sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+.input {
+  margin-bottom: 1em;
+  position: relative;
+  top: -1px;
+  border: 1px solid #888;
+}
+
+.title {
+  font-size: 1rem;
+  padding: 0.25em;
+  border: 1px solid #888;
+  text-transform: lowercase;
+  font-weight: 700;
+}
+
+.output {
+  margin-bottom: 1em;
+  position: relative;
+  top: -1px;
+  border: 1px solid #888;
+}
+
+.input pre {
+  line-height: 1.25em;
+  padding: 0.25em;
+  margin: 0;
+  border: 1px solid #888;
+  color: #000000;
+  background-color: #dedbdb;
+}
+
+.output pre {
+  line-height: 1.25em;
+  padding: 0.25em;
+  margin: 0;
+  border: 1px solid #888;
+  color: #000000;
+  background-color: #dedbdb;
+}
+
+.sample-tests pre {
+  line-height: 1.25em;
+  padding: 0.25em;
+  margin: 0;
+  border: 1px solid #888;
+  color: #000000;
+  background-color: #dedbdb;
+}
+
+.property-title {
+  display: inline;
+  padding-right: 4px;
+}
+
+.tex-formula {
+  font-family: times new roman,sans-serif;
+  vertical-align: middle;
+  margin: 0;
+  border: medium;
+  position: relative;
+  bottom: 2px;
+  display: inline;
+}
