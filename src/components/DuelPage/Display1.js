@@ -10,7 +10,7 @@ const WaitBox = ({ id, playerNumber }) => {
     const [username, setUsername] = useState();
     const [joining, setJoining] = useState(false);
     const [joiningGuest, setJoiningGuest] = useState(false);
-    const link = `http://localhost:3000/duel/${id}`;
+    const link = `https://lockouts.netlify.app/duel/${id}`;
     const copyToClipboard = () => {
         navigator.clipboard.writeText(link);
         toast.success('The link is now in your clipboard.');
