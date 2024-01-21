@@ -35,6 +35,7 @@ const BaseNavBar = () => {
                 w="10em"
                 h="auto"
                 cursor="pointer"
+                href='/'
             />
             <HStack
                 fontSize="1.5rem"
