@@ -40,7 +40,7 @@ export const DuelForm = ({
             return;
         }
         let uid = getUID();
-        console.log("user: ",username.length);
+        // console.log("user: ",username.length);
         const duelData = {
             problemCount: problemCount,
             timeLimit: timeLimit,

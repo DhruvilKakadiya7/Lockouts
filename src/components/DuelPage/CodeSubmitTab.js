@@ -100,7 +100,7 @@ const CodeSubmitTab = ({
         }
         setLastSubmissionTime(Date.now());
         let uid = getUID();
-        console.log(problems[chosenProblem.charCodeAt(0) - 65], chosenProblem.charCodeAt(0) - 65);
+        // console.log(problems[chosenProblem.charCodeAt(0) - 65], chosenProblem.charCodeAt(0) - 65);
         if (fileContent.current) {
             const submission = {
                 duelId: duelId,
@@ -111,7 +111,7 @@ const CodeSubmitTab = ({
                 languageCode: chosenLanguage,
                 playerUid: uid
             }
-            console.log(duelId);
+            // console.log(duelId);
             setSubmitting(true);
             const res = await DataBase.submitProblem(submission);
             handleCode('')
@@ -128,7 +128,7 @@ const CodeSubmitTab = ({
             }
         }
         else if (code.current) {
-            console.log(code.current);
+            // console.log(code.current);
             const submission = {
                 duelId: duelId,
                 problemId: chosenProblem.charCodeAt(0) - 65,

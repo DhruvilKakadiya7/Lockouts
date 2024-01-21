@@ -48,7 +48,7 @@ export const PlayPage = () => {
     useEffect(() => {
         const checkInDuel = async () => {
             const res = await DataBase.checkInDuel();
-            console.log(res);
+            // console.log(res);
             if (res.inDuel) {
                 setUserInDuel(true);
                 setCurrentDuelLink(`duel/${res.url}`);
@@ -57,20 +57,20 @@ export const PlayPage = () => {
         const getallDuels = async () => {
             let duels = await DataBase.getAllDuels();
             let duelCounterInfoUpdate = { active: 0, ongoing: 0, waiting: 0, initialized: 0 };
-            console.log(duels?.length);
+            // console.log(duels?.length);
             if (duels?.length) {
                 setDuels(duels);
-                console.log("duel", duels);
-                console.log(duels.filter(duel => duel.status !== "FINISHED" && duel.status !== "ABORTED" && duel.status !== "RESIGNED").length);
-                console.log(duels.filter(duel => duel.status === "WAITING"));
-                console.log(duels.filter(duel => duel.status === "INITIALIZED"));
-                console.log(duels.filter(duel => duel.status === "ONGOING"));
+                // console.log("duel", duels);
+                // console.log(duels.filter(duel => duel.status !== "FINISHED" && duel.status !== "ABORTED" && duel.status !== "RESIGNED").length);
+                // console.log(duels.filter(duel => duel.status === "WAITING"));
+                // console.log(duels.filter(duel => duel.status === "INITIALIZED"));
+                // console.log(duels.filter(duel => duel.status === "ONGOING"));
                 duelCounterInfoUpdate.active = duels.filter(duel => duel.status !== "FINISHED" && duel.status !== "ABORTED" && duel.status !== "RESIGNED").length;
                 duelCounterInfoUpdate.waiting = duels.filter(duel => duel.status === "WAITING").length;
                 duelCounterInfoUpdate.initialized = duels.filter(duel => duel.status === "INITIALIZED").length;
                 duelCounterInfoUpdate.ongoing = duels.filter(duel => duel.status === "ONGOING").length;
             }
-            console.log(duelCounterInfoUpdate);
+            // console.log(duelCounterInfoUpdate);
             setDuelCount(duelCounterInfoUpdate);
         }
         if (refresh) {

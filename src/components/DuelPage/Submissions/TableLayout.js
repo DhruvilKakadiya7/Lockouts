@@ -99,7 +99,7 @@ export const TableLayout = ({
     statusOfDuel
 }) => {
     const [data, setData] = React.useState(() => [...submissionData])
-    console.log(data);
+    // console.log(data);
     const rerender = React.useReducer(() => ({}), {})[1]
     const { isOpen, onOpen, onClose } = useDisclosure();
     const [modalContent, setModalContent] = useState();
@@ -115,7 +115,7 @@ export const TableLayout = ({
     const rowTextColor = useColorModeValue("grey.900", "offWhite");
 
     const handleOpenCode = async (data) => {
-        console.log(data);
+        // console.log(data);
         setModalContent(data);
         onOpen();
     }
@@ -124,7 +124,7 @@ export const TableLayout = ({
     };
     useEffect(()=>{
         const tempRun = ()=>{
-            console.log('changed');
+            // console.log('changed');
         }
         tempRun();
     }, [submissionData])
@@ -171,7 +171,7 @@ export const TableLayout = ({
                 </Thead>
                 <Tbody>
                     {table.getRowModel().rows.map((row, idx) => {
-                        console.log(table.getRowModel().rows.length);
+                        // console.log(table.getRowModel().rows.length);
                         if (row.original.when === "xxx") {
                             return (
                                 <Tr

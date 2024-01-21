@@ -233,7 +233,7 @@ const ResultDisplay = ({ id }) => {
         const getResult = async () => {
             let duel = await DataBase.getDuelById(id);
             let res = duel.result;
-            console.log(duel);
+            // console.log(duel);
             if (res) {
                 if (res[0] === "TIE") setResult("TIE");
                 else if (res[0] === "ABORTED") setResult("ABORTED");

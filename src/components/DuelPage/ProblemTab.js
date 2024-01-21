@@ -62,7 +62,7 @@ export const ProblemTab = ({
                 width={'100%'}
             >
                 {problems?.map((obj, idx) => {
-                    console.log(obj);
+                    // console.log(obj);
                     return (
                         <TabPanel
                             key={idx}

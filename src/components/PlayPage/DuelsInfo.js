@@ -11,7 +11,7 @@ export const DuelsInfo = ({
         "rgb(0, 0, 0, 0.5)",
         "rgb(255, 255, 255, 0.5)"
     );
-    console.log(duelCount);
+    // console.log(duelCount);
     
 
     return (

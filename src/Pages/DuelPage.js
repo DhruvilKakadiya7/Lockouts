@@ -210,7 +210,7 @@ export const DuelPage = () => {
     const getDuelInfo = async () => {
       const duel = await DataBase.getDuelById(id);
       const uid = getUID();
-      console.log("DUEL Page: ", duel);
+      // console.log("DUEL Page: ", duel);
       if (!duel) {
         navigate('/play');
       }
@@ -237,7 +237,7 @@ export const DuelPage = () => {
           const problem = await DataBase.findProblem(duel.problems[i].Id);
           temp.push(problem);
         }
-        console.log(temp);
+        // console.log(temp);
         setProblemDatas(temp);
         setFetchProblems(false);
         setSubRefresh(true);
@@ -278,7 +278,7 @@ export const DuelPage = () => {
     });
 
     socket.on('problem-accepted', ({ duelId, uid }) => {
-      console.log("sock: ", duelId);
+      // console.log("sock: ", duelId);
       if (duelId === id) {
         setSubRefresh(true);
       }

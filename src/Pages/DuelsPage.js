@@ -26,7 +26,7 @@ export const DuelsPage = () => {
                     avail[i]['timelimit'] = avail[i].timeLimit;
                 }
                 avail.reverse();
-                console.log(avail, avail.length);
+                // console.log(avail, avail.length);
                 while(avail.length < 10) {
                     const dummy = {
                         handle: '0ecae3d1-6cda-483f-a3d8-c57b32b4eab1',
@@ -36,7 +36,7 @@ export const DuelsPage = () => {
                     }
                     avail.push(dummy);
                 }
-                console.log(avail);
+                // console.log(avail);
                 for (let i = 0; i < active.length; i++) {
                     active[i]['usernames'] = `${active[i].players[0].handle} v ${active[i].players[1].handle}`;
                     let currTime = new Date();
@@ -51,7 +51,7 @@ export const DuelsPage = () => {
                     }
                     active.push(dummy);
                 }
-                console.log(active);
+                // console.log(active);
                 for (let i = 0; i < past.length; i++) {
                     past[i]['usernames'] = `${past[i].players[0].handle} v ${past[i].players[1].handle}`;
                     let currTime = new Date();
@@ -61,7 +61,7 @@ export const DuelsPage = () => {
                     }
                 }
                 past.reverse();
-                console.log(past);
+                // console.log(past);
                 // 9d7909ec-4843-488e-a726-a9146fc9e462
                 while(past.length < 10) {
                     const dummy = {

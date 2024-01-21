@@ -40,7 +40,7 @@ function Filter({
     const firstValue = table
         .getPreFilteredRowModel()
         .rows[0]?.getValue(column.id)
-    console.log(firstValue);
+    // console.log(firstValue);
     const columnFilterValue = column.getFilterValue()
 
     return typeof firstValue === 'number' ? (
@@ -86,7 +86,7 @@ function Filter({
 export const TableLayout = ({
     pastDuels
 }) => {
-    console.log(pastDuels);
+    // console.log(pastDuels);
     const [data, setData] = React.useState(() => [...pastDuels])
     const rerender = React.useReducer(() => ({}), {})[1]
 
@@ -143,7 +143,7 @@ export const TableLayout = ({
                 </Thead>
                 <Tbody>
                     {table.getRowModel().rows.map((row, idx) => {
-                        console.log(table.getRowModel().rows.length);
+                        // console.log(table.getRowModel().rows.length);
                         if (row.original.usernames === "9d7909ec-4843-488e-a726-a9146fc9e462") {
                             return (
                                 <Tr

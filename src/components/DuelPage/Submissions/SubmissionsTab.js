@@ -17,12 +17,12 @@ export const SubmissionsTab = ({
     useEffect(() => {
         const getData = async () => {
             let data = await DataBase.getSubmissions(duelId);
-            console.log("subData2: ", data);
+            // console.log("subData2: ", data);
             if (!data) {
                 data = []
             }
             
-            console.log("probs: ", problems);
+            // console.log("probs: ", problems);
             const uid = getUID();
             data = data.filter((obj) => obj.playerUid == uid)
             for (let i = 0; i < data.length; i++) {
@@ -30,7 +30,7 @@ export const SubmissionsTab = ({
                 let diff = currTime.toLocaleString('en-GB', { hour: 'numeric', minute: 'numeric', second: 'numeric' });
                 data[i]['when'] = `${diff}`;
                 data[i]['problem'] = problems[data[i].problemNumber]?.name;
-                console.log(data[i].status);
+                // console.log(data[i].status);
                 const doc = new DOMParser().parseFromString(data[i].status.trim(), 'text/html');
                 data[i]['verdict'] = doc.body.textContent || "";
             }
@@ -43,9 +43,9 @@ export const SubmissionsTab = ({
                 }
                 data.push(tempData);
             }
-            console.log("subData: ", data);
+            // console.log("subData: ", data);
             setSubmissionData(data);
-            console.log(submissionData);
+            // console.log(submissionData);
             setLoading(false);
         }
         if (refresh) {

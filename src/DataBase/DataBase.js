@@ -58,7 +58,7 @@ class DataBase {
 
     static async submitProblem(submission) {
         try {
-            console.log(submission);
+            // console.log(submission);
             let result = await axios.post(`${process.env.REACT_APP_SUB_SERVER_LINK}/submitProblem`, submission);
             result = result.data;
             return [result.result, result];
@@ -83,7 +83,7 @@ class DataBase {
         try {
             let result = await axios.get(`${process.env.REACT_APP_SUB_SERVER_LINK}/getDuelSubmissions/${id}`);
             result = result.data;
-            console.log("database sub:", result);
+            // console.log("database sub:", result);
             return result.submissions;
         } catch (e) {
             console.log(e);

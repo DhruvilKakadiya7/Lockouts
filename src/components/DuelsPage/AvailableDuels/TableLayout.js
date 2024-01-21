@@ -50,7 +50,7 @@ function Filter({
     const firstValue = table
         .getPreFilteredRowModel()
         .rows[0]?.getValue(column.id)
-    console.log(firstValue);
+    // console.log(firstValue);
     const columnFilterValue = column.getFilterValue()
 
     return typeof firstValue === 'number' ? (
@@ -154,7 +154,7 @@ export const TableLayout = ({
                 <Tbody>
                     {table.getRowModel().rows.map((row, idx) => {
                         // console.log(table.getRowModel().rows.length);
-                        console.log(row.original.handle)
+                        // console.log(row.original.handle)
                         if (row.original.handle === "0ecae3d1-6cda-483f-a3d8-c57b32b4eab1") {
                             return (
                                 <Tr
