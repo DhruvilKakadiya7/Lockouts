@@ -8,8 +8,10 @@ import { PlayPage } from './Pages/PlayPage';
 import { DuelsPage } from './Pages/DuelsPage';
 import { DuelPage } from './Pages/DuelPage'
 import { ContactPage } from './Pages/ContactPage';
+import usePageTracking from "./usePackageTacking";
 
 function App() {
+  usePageTracking();
   return (
       <>
         <div>
