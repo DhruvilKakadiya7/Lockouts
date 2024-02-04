@@ -28,7 +28,6 @@ function App() {
           >
           </Toaster>
         </div>
-        <BrowserRouter>
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/play' element={<PlayPage/>}/>
@@ -36,7 +35,6 @@ function App() {
             <Route path='/duel/:id' element={<DuelPage/>}/>
             <Route path='/contact' element={<ContactPage/>}/>
           </Routes>
-        </BrowserRouter>
       </>
   );
 }
