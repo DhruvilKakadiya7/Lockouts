@@ -9,7 +9,7 @@ const usePageTracking = () => {
 
   useEffect(() => {
     if (!window.location.href.includes("localhost")) {
-      const MEASUREMENT_ID = process.env.REACT_APP_GA_LINK;
+      const MEASUREMENT_ID = 'G-648W23BD27';
       ReactGA.initialize(MEASUREMENT_ID);
     }
     setInitialized(true);
