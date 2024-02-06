@@ -191,7 +191,7 @@ const BaseFooter = () => {
                     fontWeight="bold"
                     color={colorMode === "light" ? "primary.500" : "primary.300"}
                     cursor="pointer"
-                    href="https://github.com/DhruvilKakadiya7"
+                    // href="https://github.com/DhruvilKakadiya7"
                 >
                     Dhruvil Kakadiya
                 </Link>
